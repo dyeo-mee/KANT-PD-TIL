@@ -1,7 +1,7 @@
 ## 1. Main Component / Instance / Override
 - 복제의 한계
     - 소프트웨어가 커지고 복잡해지면서, 다른 페이지에서 같은 UI를 수정하는 일이 번번히 발생.
-    - 재사용, 유지보수, 협업을 쉽게 하기위함
+    - 재사용, 유지보수, 협업을 쉽게 하기위해 컴포넌트 기능을 사용.
 
 - Main Component (컴포넌트 만들기: *cmd+option+k*)<br>
 → 한 번 만들어 여러 곳에 쓰는 재사용 요소.
@@ -40,12 +40,13 @@
     - Reset<br>
     : 인스턴스 요소를 선택하고 오른쪽 패널 상단의 ‘more action’ > reset<br>
         → 인스턴스를 main 상태로 되돌리는 것.
-    - Detach (option+cmd+b)<br>
+    - Detach *(option+cmd+b)*<br>
     : 인스턴스와 main의 연결을 끊고 새로운 프레임으로 생성<br>
         → main 컴포넌트 디자인을 재활용 해 변형시킬 때 사용<br>
         → main 컴포넌트는 원본 자체이므로 instance만 detach 가능함!
         - UI 시스템을 제작하는 업무가 아닌 이상, main 컴포넌트를 다룰 일이 없음<br>
-        신사업 등 새로운 프로젝트에서 컴포넌트의 형태 변형이 필요한 경우 인스턴스를 Detach해서 변형해 사용함. -> main 컴포넌트를 건들지 않도록 유의 ‼️
+        신사업 등 새로운 프로젝트에서 컴포넌트의 형태 변형이 필요한 경우 인스턴스를 Detach해서 변형해 사용함.<br> 
+        -> main 컴포넌트를 건들지 않도록 유의 ‼️
 
 - 중첩 컴포넌트: 컴포넌트 안에 다른 컴포넌트의 인스턴스를 넣는 것.<br>
 → ex.카드 컴포넌트 안의 다른 컴포넌트 인스턴스인 버튼, 아이콘 요소
@@ -64,7 +65,7 @@
     | Size | 놓일 자리, 크기 | S, M, L |
 
 - Variant Metrix: Variant를 만들기 전, 필요한 속성과 조합을 설계하고 검토하는 도구.<br>
-    - 설계 과정과 필요한 이유
+    - 설계가 필요한 이유
     1. 속성 정의: 어떤 요소가 달라지는지 먼저 분석. 무분별한 속성 추가를 방지.
     2. 속성 간 중복과 역할 충돌 방지: 하나의 속성이 명확한 역할을 담당하도록 설계.<br>
     한 축 안의 값은 중복되는 경우가 없어야 함.
@@ -76,7 +77,6 @@
     ex. icon/heart, check, home, search
     - Variant 네이밍 규칙
         - 영어 명사 사용
-        - 상태, 크기, 유형을 속성 축으로 나눠 variant 구성을 설계
         - Variant2 같은 기본 생성된 이름 사용금지. → 역할이나 목적이 드러나게 네이밍
         - 첫 글자는 대문자로 ex. primary ❌ Primary ✅<br>
         → 회사가 기존에 가지고있는 규칙을 따르는데 초점!
@@ -91,8 +91,8 @@
     - Variant: 같은 컴포넌트를 어떤 상태와 형태로 보여줄 것인가?
         - 버튼이라는 동일한 기능을 유지하면서 속성에 따라 디자인을 다르게 함.
 
-        > 💡 Instance Swap = 같은 자리에 들어갈 다른 부품을 교체한다.<br>
-        Variant = 같은 부품의 크기, 색상, 상태, 유형 등을 변경한다.
+    > 💡 Instance Swap = 같은 자리에 들어갈 다른 부품을 교체한다.<br>
+    Variant = 같은 부품의 크기, 색상, 상태, 유형 등을 변경한다.
 
 - 폭증과 슬래시 이름<br>
     - Variant 수 = 축마다 값 개수를 곱한 값.<br>
@@ -102,9 +102,9 @@
     - 슬래시(/) 이름<br>
         : 분류와 구조화를 위한 규칙. 컴포넌트를 어떤 카테고리에 속하게 할 것인가?<br>
         ```
-        Button/Primary
-        Button/Secondary
-        Button/Outline
+        Icon/Home
+        Icon/Search
+        Icon/Heart
 
         Section/Hero
         Section/Body
@@ -116,6 +116,7 @@
 - [실습 자료 링크](https://www.figma.com/design/NHR0qJ0VxtBZRtPmaPi554/-%EA%B9%80%ED%98%84%EA%B2%BD--Figma-%EB%A7%88%EC%8A%A4%ED%84%B0-%EC%8B%A4%EC%8A%B5?node-id=41-466&t=W2mOYgUiOs86sqdv-1)<br>
 ->  하면서 느낀 점:<br>
     - main 컴포넌트의 형태, 색 뿐 아니라 레이어 명까지 한번에 인스턴스에 반영된다.
+    - 여러 레이어 이름 한번에 바꾸기 → *Shift(다중 레이어 선택) 후 cmd+r*
     - 인스턴스 reset 기능은 두 가지.<br>
     달라진 속성 하나만 리셋하는 → *‘Reset specific changes’*<br>
     main 상태로 한번에 되돌리는(초기화) → *‘Reset instance’*
