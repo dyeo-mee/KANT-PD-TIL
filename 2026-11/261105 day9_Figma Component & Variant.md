@@ -120,10 +120,12 @@
     - 인스턴스 reset 기능은 두 가지.<br>
     달라진 속성 하나만 리셋하는 → *‘Reset specific changes’*<br>
     main 상태로 한번에 되돌리는(초기화) → *‘Reset instance’*
-        <details>
-            <summary>Icon Instance swap 할 때 컬러가 바뀌지 않는 현상</summary>
-                방법1. Outline Stroke: 선으로 만들어진 아이콘의 vector를 면 형태로 바꾼다.<br>
-                방법2. Flatten: 두 개의 vector 레이어를 하나로 합친다. (레이어 병합)<br>
-                → 두 가지 방법 모두 cmd+z 말곤 전으로 되돌릴 수 없으므로 작업을 진행하기 전 원본 파일을 유지하는 것이 중요.<br>
-                - PD 직무는 회사마다 정해진 디자인 시스템 안에서 필요한 요소를 가지고와 화면을 구성하는 일(조립)에 초점을 두면 됨.
-            </details>
+    - 아이콘의 variants:true, false 속성 컬러가 바뀌지 않는 현상<br>
+    : 레이어 구조나 명명 규칙이 달라 속성 값이 제대로 적용되지 않는 것.<br>
+    -> 바뀌지않는 레이어 구조를 확인하거나 아이콘 vector 파일이 fill(solid), stroke 색상인지 등 차이점을 먼저 확인하기.
+    - 아이콘 작업 시 Outline Stroke와 Flatten의 차이점.
+        - Outline Stroke: 선으로 만들어진 아이콘의 vector를 면 형태로 바꾼다.
+        - Flatten: 두 개의 vector 레이어를 하나로 합친다. (레이어 병합)<br>
+        → 두 가지 방법 모두 cmd+z 말곤 전으로 되돌릴 수 없으므로 작업을 진행하기 전 원본 파일을 유지하는 것이 중요.
+    - PD 직무는 회사마다 정해진 디자인 시스템 안에서 필요한 요소를 가지고와 화면을 구성하는 일(조립)에 초점을 두면 됨.
+    - 프레임 크기를 변경하는데 icon vector 레이어가 늘고 줄면, constraints 속성을 확인할 것!
