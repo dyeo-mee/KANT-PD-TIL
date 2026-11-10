@@ -16,17 +16,10 @@
         *레이어를 열지 않고 패널에서 바꾸는게 핵심.*
         
     - 레이어 연결
-
-        |---|---|---|---|  
-        | Property | 연결하는 레이어 | 만드는 법 | 인스턴스에서 |  
-        | Text | 텍스트 레이어 | 텍스트 레이어 선택 → 연결 아이콘 | 글자 입력 |  
-        | Boolean | 숨길 수 있는 레이어 | 레이어 선택 → layer 영역 연결 아이콘<br>(Layout 아래 Apperance 설정) | 토글 켜기/끄기 |  
-        | Instance swap | 아이콘 인스턴스 | 인스턴스 선택 → 연결 아이콘 | 목록에서 고르기 |
-
         1. Main Component(혹은 Component Set) → 오른쪽 패널 properties 옆 **+** → 타입, 이름, 기본값 입력 → 연결
         2. 적용할 레이어 선택 → 오른쪽 패널 속성 연결 아이콘(apply variable/property)
-        - Boolean: ***(Layout 아래 Apperance 설정에서 연결 가능)***
-
+        - Boolean: ***(Layout 아래 Apperance 설정에서 연결 가능)***<br>
+        <img src="../img/property-apply-types.png" width="70%"><br>
         → 연결 확인: main 레이어 이름 옆에 속성 표시 생김.(인스턴스 패널에서 바꿨을 때 캔버스가 바뀌면 성공)
 
         - Preferred values: Instance swap 목록에 먼저 보여줄 컴포넌트를 정하는 기능.<br>
