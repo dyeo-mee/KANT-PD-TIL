@@ -29,7 +29,14 @@
     - 만족도(Satisfaction)<br>
     : 서비스를 이용하면서 얼마나 편리하고 긍정적인 경험을 느끼는가?
         - 측정 예시: 서비스 이용 후 사용자가 전반적인 경험에 만족하는가?
-        - 측정 지표: 만족도 설문, NPS, SUS 점수
+        - 측정 지표: 만족도 설문, NPS/SUS 점수<br>
+            <details>
+                <summary>NPS, SUS 점수</summary>
+                *NPS: Net Promoter Score 고객 추천 의향(고객 충성도 측정)<br>
+                **SUS: System Usabillity Scale 서비스 사용 편의성(UX/UI 사용성 평가)<br>
+                - NPS는 높은데 SUS가 낮다면 서비스 자체는 선호하지만 이용 과정이 불편할 가능성 있음<br>
+                - SUS는 높은데 NPS가 낮다면 사용하기 쉽지만 서비스의 차별성이나 고객가치가 부족할 가능성 존재.
+            </details>
 
 - 사용성 확인하는 방법 (행동 - 태도)
     - 정성적: 사용성 테스트, 필드 관찰 - 사용자 인터뷰/포커스 그룹
