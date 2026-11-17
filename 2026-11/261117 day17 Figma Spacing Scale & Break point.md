@@ -21,24 +21,23 @@ Auto layout 간격과 패딩을 스케일 값으로 설정할 수 있다.
 
 ## 2. 스크린 사이즈와 브레이크포인트
 > 해상도(px)와 논리 단위(pt, dp)를 구분할 수 있다.<br>
-대효 화면 크기와 브레이크 포인트를 설명할 수 있다.<br>
+대표 화면 크기와 브레이크 포인트를 설명할 수 있다.<br>
 한 화면을 모바일/태블릿/데스크탑 레이아웃으로 바꿀 수 있다.
 
 - Logical Units (논리 단위) = UI의 크기를 정의하는 기준<br>
 → 화면의 실제 점(픽셀)의 수는 기기마다 다름.<br>
-→ 화면의 크기가 동일해도 해상도에 따라 픽셀 단위가 변경<br>
-(화질이 높을수록 화면이 더 선명함. 1080px → 1440px)<br>
+→ 화면의 크기가 동일해도 해상도에 따라 픽셀 단위가 변경(화질이 높을수록 화면이 더 선명함. 1080px → 1440px)<br>
 → 논리 단위는 OS별 명칭만 다를 뿐, 수치값은 동일함.
 
     - Platform-specific Logical Units
 
     | 사용하는 곳 | 단위 | 뜻 |
     |---|---|---|
-    | iOS | px(픽셀) | 화면을 구성하는 단위 |
-    | Android | pt(포인트) | 논리 단위(Point) |
-    | 웹(CSS), 이미지 파일 | dp<br>(Density-independent Pixel) | 160dpi 화면을 기준으로 한 논리 단위 |
+    | iOS | pt(포인트) | 화면을 구성하는 단위 |
+    | Android | dp<br>(Density-independent Pixel) | 논리 단위(Point) |
+    | 웹(CSS), 이미지 파일 | px(픽셀) | 160dpi 화면을 기준으로 한 논리 단위 |
 
-- 배율 = 실제 디스프레이 픽셀로 표현하는 비율(@1.5x, @2x, @3x)<br>
+- 배율 = 실제 디스플레이 픽셀로 표현하는 비율(@1.5x, @2x, @3x)<br>
 : 동일한 UI 크기를 유지하면서 디바이스의 픽셀 밀도에 맞춰 더 많은 물리적 픽셀을 사용하는 것.<br>
 ex. UI 크기가 100px인 버튼 → @1.5x = 150px, @3x = 300px
 
@@ -49,34 +48,33 @@ ex. UI 크기가 100px인 버튼 → @1.5x = 150px, @3x = 300px
     > 💡 에셋을 배율로 내보내는 이유는 픽셀 밀도가 다른 디스플레이에서도 동일한 시각적 크기와 선명도를 유지하기 위함임.
 
 - 화면 크기: 점유율이 많은 디바이스를 기준으로 함.(유동적)<br>
-→ [국가별, OS별, 모바일별 화면 해상도 점유율을 확인 사이트](https://gs.statcounter.com/screen-resolution-stats/mobile-tablet/south-korea?utm_source=chatgpt.com)<br>
-→ [화면 너비별 디바이스 분포 확인](https://screensizemap.com/?utm_source=chatgpt.com)<br>
+→ [국가별, OS별, 모바일별 화면 해상도 점유율 사이트](https://gs.statcounter.com/screen-resolution-stats/mobile-tablet/south-korea?utm_source=chatgpt.com)<br>
+→ [화면 너비별 디바이스 분포](https://screensizemap.com/?utm_source=chatgpt.com)<br>
     <details>
-        <summary>디자인 진행 순서</summary>
+        <summary>디자인 진행 순서 예시</summary>
         1. 한국 모바일 화면 크기 점유율 확인.<br>
         2. iOS와 Android 대표 디바이스 크기 각각 선정.<br>
         3. Figma에서 논리 단위로 프레임 구성.<br>
         4. 가장 작은 화면에서 레이아웃이 깨지는지 검증.<br>
-        *→ 대표 프레임을 정하는 것은 디자인 생산성을 위한 기준이며, 최소 화면 크기는 레이아웃 안정성을 위한 기준!*
+        <strong>→ 대표 프레임을 정하는 것은 디자인 생산성을 위한 기준이며, 최소 화면 크기는 레이아웃 안정성을 위한 기준!</strong>
     </details>
 
 - 브레이크 포인트: 레이아웃이 전환되어야 하는 지점(가로 폭)<br>
     → 사용자 디바이스 점유율과 서비스 특성을 근거로 팀 내 반응형 전환 기준(Breakpoint)을 정의하고, 공통 디자인 원칙으로 삼아 작업함!<br>
-    ex. 모바일: 0~767px(1 Column), 태블릿: 768~1023px(2 Columns), 데스크탑: 1024px 이상(Multi Column)
+    ex. 모바일: 0-767px(1 Column), 태블릿: 768-1023px(2 Columns), 데스크탑: 1024px 이상(Multi Column)
 
-- 바뀌는 패턴: 화면이 넓어질 때 자주 쓰는 4가지 
+- 화면이 넓어질 때 자주 쓰는 4가지 패턴
     1. 열 수 바꾸기: 목록이 1열 -> 2열로 바뀜
     2. 내비게이션 바꾸기: 하단 탭에서 옆 레일/사이드바로 변경
     3. 보조정보 보이기/숨기기
-    4. 최대 폭 제한: 데스크탑 화면의 가로폭대로 정보가 퍼지면 파악하기 힘듦.
+    4. 최대 폭 제한: 데스크탑 화면의 가로 폭 대로 정보가 퍼지면 파악하기 힘듦.
 
 ## 3. iOS, Android, Web 디바이스 별 유의점
 > Safe Area와 시스템 영역을 고려해 화면을 구성할 수 있다.<br>
 iOS 와 Android의 큰 차이점은?
 
 - iOS 와 Android 같은 기능, 다른 규칙<br>
-→ 안드로이드는 시스템 상 뒤로가기 버튼이 존재해 만들지 않았었으나, 다른 운영 체제(iOS) 사용자를 고려해 화살표가 추가됐다.<br>
-→ 안드로이드: 웹 접근성을 중요시 생각.<br>
+→ 안드로이드는 시스템 상 뒤로가기 버튼이 존재하지만, 다른 운영 체제 사용자를 고려해 화살표를 추가했다. 또한, 웹 접근성을 중요시 생각.<br>
 → iOS는 뒤로가기 버튼을 누를 경우, 이동하게 될 화면의 이름을 적어두기 때문에 제목이 가운데 위치함.
 
     | 항목 | iOS(Apple HIG) | Android(Material 3) |
@@ -90,8 +88,9 @@ iOS 와 Android의 큰 차이점은?
 - 시스템 영역의 종류
     - Safe Area 안전 영역<br>
         : 상태바, 다이내믹 아일랜드, 노치, 홈 인디케이터 등 시스템 UI와 겹치지 않게 확보하는 영역.<br>
-        (iOS: Safe Area Insets, Android: Window Insets)<br>
-        <img src="../img/Safe-area.png" width="90%">
+        (iOS: Safe Area Insets, Android: Window Insets)
+
+        <img src="../img/Safe-area.png" width="50%">
     - 키보드: IME Insets - 키보드가 화면에 나타났을 때 높이를 감지하는 영역
     - Bottom CTA/Sticky Button - 화면 하단에 고정된 메인 버튼.<br>
     : 키보드가 올라오면 키보드 바로 위로 버튼을 이동시키는 UI 패턴
