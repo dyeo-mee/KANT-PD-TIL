@@ -33,9 +33,9 @@ Auto layout 간격과 패딩을 스케일 값으로 설정할 수 있다.
 
     | 사용하는 곳 | 단위 | 뜻 |
     |---|---|---|
-    | iOS | pt(포인트) | 화면을 구성하는 단위 |
-    | Android | dp<br>(Density-independent Pixel) | 논리 단위(Point) |
-    | 웹(CSS), 이미지 파일 | px(픽셀) | 160dpi 화면을 기준으로 한 논리 단위 |
+    | iOS | pt(포인트) | 논리 단위(Point) |
+    | Android | dp<br>(Density-independent Pixel) | 160dpi 화면을 기준으로 한 논리 단위 |
+    | 웹(CSS), 이미지 파일 | px(픽셀) | 화면을 구성하는 단위 |
 
 - 배율 = 실제 디스플레이 픽셀로 표현하는 비율(@1.5x, @2x, @3x)<br>
 : 동일한 UI 크기를 유지하면서 디바이스의 픽셀 밀도에 맞춰 더 많은 물리적 픽셀을 사용하는 것.<br>
@@ -96,12 +96,12 @@ iOS 와 Android의 큰 차이점은?
     : 키보드가 올라오면 키보드 바로 위로 버튼을 이동시키는 UI 패턴
     - 제스처 영역: 홈 인디케이터, 뒤로가기 스와이프
 
-    > 💡 핵심 용어 정리
+        > 💡 핵심 용어 정리
 
-        - 시스템 영역 대응: Safe Area Insets
-        - 키보드 영역 감지: Keyboard Insets (IME Insets)
-        - 하단 버튼 고정: Sticky Bottom CTA
-        - 화면 영역 자동 조정: Resize / Insets-based Layout
+            - 시스템 영역 대응: Safe Area Insets
+            - 키보드 영역 감지: Keyboard Insets (IME Insets)
+            - 하단 버튼 고정: Sticky Bottom CTA
+            - 화면 영역 자동 조정: Resize / Insets-based Layout
 
 - Web 화면 디자인할 때 신경써야할 점.
     - Hover & Focus: 모바일에는 존재하지 않지만 웹에서 기능하는 상태 값.<br>
