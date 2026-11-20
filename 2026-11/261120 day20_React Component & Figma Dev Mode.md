@@ -1,10 +1,10 @@
 ## 1. 컴포넌트 기반 개발
 > 컴포넌트와 React가 무엇인지 설명 가능<br>
-Props와 State를 Figma 컴포넌트 속성,Variant와 연결해 설명할 수 있다.
+Props와 State를 Figma 컴포넌트 속성, Variant와 연결해 설명할 수 있다.
 
 - 컴포넌트: 화면을 이루는 재사용 가능한 부품 → 웹/앱 화면에서 컴포넌트 단위로 만들고 조립.
 
-- React: UI를 컴포넌트로 관리하는 JavaSctipt 라이브러리
+- React: UI를 컴포넌트로 관리하는 JavaScript 라이브러리
     - 컴포넌트: 다시 쓰는 화면 조각
     - State: 바뀔 수 있는 값(상태)
     - 렌더링: 상태를 반영해 화면을 변경<br>
